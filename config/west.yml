@@ -5,6 +5,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
+      # TODO: Use a specific tag or branch
       revision: main
       import: app/west.yml
   self:
