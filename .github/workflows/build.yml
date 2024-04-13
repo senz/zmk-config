@@ -20,6 +20,6 @@ jobs:
       SHA_SLICE: ${{ steps.set-sha.outputs.SHA_SLICE }}
   build:
     needs: name-params
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@${{ vars.zmk_ref }}
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@${{ vars.ZMK_REF }}
     with:
       archive_name: zmk-senz-${{ needs.name-params.outputs.CURRENT_DATE }}-${{ needs.name-params.outputs.SHA_SLICE }}-${{ github.run_number }}
