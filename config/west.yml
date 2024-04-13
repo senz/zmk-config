@@ -13,6 +13,6 @@ manifest:
       import: app/west.yml
     - name: keeb42
       remote: piit79
-      revision: fb48311b60f3b3675e6b2bd82c2691a16bd71300
+      revision: main
   self:
     path: config
