@@ -1,0 +1,8 @@
+file_format: "1"
+id: rev57lp
+name: Rev57LP
+type: shield
+url: https://github.com/piit79/rev57lp
+requires: [pro_micro]
+features:
+  - keys
