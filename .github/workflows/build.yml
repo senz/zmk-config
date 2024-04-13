@@ -1,4 +1,15 @@
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    paths:
+      - config/west.yml
+      - config/*.keymap
+      - config/*.conf
+      - config/includes/*.dtsi
+      - config/boards/**
+      - boards/**
+      - build.yaml
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   name-params:
