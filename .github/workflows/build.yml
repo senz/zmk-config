@@ -1,5 +1,25 @@
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
+  name-params:
+    runs-on: ubuntu-latest
+    steps:
+      - name: prepare archive name parameters
+        id: set-date
+        shell: bash
+        run: echo "CURRENT_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+      - name: set sha slice
+        id: set-sha
+        shell: bash
+        run: echo "SHA_SLICE=$(echo '${{ github.sha }}' | cut -c 1-6)" >> $GITHUB_OUTPUT
+      - name: output current date
+        shell: bash
+        run: echo ${{ steps.set-date.outputs.CURRENT_DATE }}
+    outputs:
+      CURRENT_DATE: ${{ steps.set-date.outputs.CURRENT_DATE }}
+      SHA_SLICE: ${{ steps.set-sha.outputs.SHA_SLICE }}
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    needs: name-params
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@${{ vars.zmk_ref }}
+    with:
+      archive_name: zmk-senz-${{ needs.name-params.outputs.CURRENT_DATE }}-${{ needs.name-params.outputs.SHA_SLICE }}-${{ github.run_number }}
