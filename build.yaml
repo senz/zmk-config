@@ -40,3 +40,10 @@ include:
     cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
     shield: corne_left nice_view_adapter nice_view
     artifact-name: corne_left_nice_view_with_logging
+# wired rev57lp
+  - board: rpi_pico
+    shield: rev57lp
+  - board: rpi_pico
+    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+    artifact-name: rev57lp_with_logging
+    shield: rev57lp
