@@ -18,7 +18,14 @@
 #
 ---
 include:
+# totem wireless
   - board: seeeduino_xiao_ble
     shield: totem_left
   - board: seeeduino_xiao_ble
     shield: totem_right
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
+  - board: seeeduino_xiao_ble
+    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+    shield: totem_left
+    artifact-name: totem_left_with_logging
