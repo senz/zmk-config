@@ -4,7 +4,7 @@ This repository contains my personal ZMK configurations for various keyboards.
 Currently, the following keyboards are supported:
 - [Corne MX wireless](./config/corne.keymap)
 - [Totem wireless](./config/totem.keymap)
-- Rev57LP (TBD)
+- [Rev57LP](./config/rev57lp.keymap)
 
 ## Keymap representation
 
@@ -28,4 +28,9 @@ Below representation was generated with [`keymap-drawer`](https://github.com/cak
 
 ### Rev57LP
 
-TBD
+<details>
+    <summary>Click to expand</summary>
+
+![Keymap Representation](./keymap-drawer/rev57lp.svg?raw=true "Keymap Representation for Rev57LP wireless")
+</details>
+
