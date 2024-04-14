@@ -1,72 +1,122 @@
-layout: {qmk_layout: LAYOUT_ergo5x12, qmk_info_json: 'config/boards/shields/rev57lp/info.json'}
 layers:
-  base:
-  - [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', BSPC]
-  - [TAB, Q, W, E, R, T, Y, U, I, O, P, '''']
-  - [LCTRL, A, S, D, F, G, LGUI, H, J, K, L, ;]
-  - [RET, LSHIFT, Z, X, C, V, B, N, M, ',', ., /]
-  - [RSHIFT, fun_nav, LALT, SPACE, '-', '=', SPACE, \, fun_nav]
+  base: [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', BSPC, TAB, Q, W, E, R, T, Y, U, I, O, P, '''', LCTRL, A, S, D, F, G, LGUI, H, J, K, L, ;, RET, LSHIFT,
+    Z, X, C, V, B, N, M, ',', ., /, RSHIFT, fun_nav, LALT, SPACE, '-', '=', SPACE, \, fun_nav]
   fun_nav:
-  - ['~', '!', '@', '#', $, '%', ^, '&', '*', (, ), DEL]
-  - ['`', F1, F2, F3, F4, '{', '}', HOME, UP, END, PG UP, '"']
-  - - {t: ▽, type: trans}
-    - F5
-    - F6
-    - F7
-    - F8
-    - (
-    - {t: ▽, type: trans}
-    - )
-    - LEFT
-    - DOWN
-    - RIGHT
-    - PG DN
-  - - INS
-    - {t: ▽, type: trans}
-    - F9
-    - F10
-    - F11
-    - F12
-    - '['
-    - ']'
-    - APP
-    - PSCRN
-    - SLCK
-    - PAUSE BREAK
-  - - {t: ▽, type: trans}
-    - {type: held}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - VOL DN
-    - VOL UP
-    - {t: ▽, type: trans}
-    - MUTE
-    - ''
+  - '~'
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
+  - DEL
+  - '`'
+  - F1
+  - F2
+  - F3
+  - F4
+  - '{'
+  - '}'
+  - HOME
+  - UP
+  - END
+  - PG UP
+  - '"'
+  - {t: ▽, type: trans}
+  - F5
+  - F6
+  - F7
+  - F8
+  - (
+  - {t: ▽, type: trans}
+  - )
+  - LEFT
+  - DOWN
+  - RIGHT
+  - PG DN
+  - INS
+  - {t: ▽, type: trans}
+  - F9
+  - F10
+  - F11
+  - F12
+  - '['
+  - ']'
+  - APP
+  - PSCRN
+  - SLCK
+  - PAUSE BREAK
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - VOL DN
+  - VOL UP
+  - {t: ▽, type: trans}
+  - MUTE
+  - ''
   blutut:
-  - - OUT TOG
-    - {t: BT, h: '0'}
-    - {t: BT, h: '1'}
-    - {t: BT, h: '2'}
-    - {t: BT, h: '3'}
-    - {t: BT, h: '4'}
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-  - ['', '', '', '', '', '', '', '', '', '', '', '']
-  - ['', '', '', '', '', '', BT CLR, '', '', '', '', '']
-  - ['', '', '', '', '', '', '', '', '', '', '', '']
-  - - ''
-    - {type: held}
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - {type: held}
+  - OUT TOG
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - BT CLR
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
 combos:
 - p: [4, 5, 6, 7]
   k: '&bootloader'
