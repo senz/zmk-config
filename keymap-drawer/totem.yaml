@@ -33,12 +33,12 @@ layers:
   - .
   - /
   - ''
-  - {t: ESC, h: '2'}
-  - {t: SPACE, h: '2'}
-  - ''
-  - ''
+  - {t: ESC, h: '4'}
   - {t: SPACE, h: '4'}
-  - {t: BACKSPACE, h: '4'}
+  - ''
+  - ''
+  - {t: SPACE, h: '2'}
+  - {t: BACKSPACE, h: '2'}
   '4':
   - '!'
   - '@'
@@ -72,11 +72,11 @@ layers:
   - '3'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - ENTER
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: TAB, type: held}
+  - TAB
   - {t: ▽, type: trans}
   '2':
   - '!'
@@ -111,11 +111,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - ENTER
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - TAB
+  - {t: TAB, type: held}
   - {t: ▽, type: trans}
   Tune:
   - BT CLR
