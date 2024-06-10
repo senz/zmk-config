@@ -111,7 +111,7 @@
             label = "Sym";
             bindings = <
         &kp EXCLAMATION  &kp AT             &kp POUND              &kp SEMICOLON  &kp LBRC    &kp EQUAL      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp N0
-        &kp LEFT_SHIFT   &trans             &trans                 &kp COLON      &kp LBKT    &kp MINUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans
+        &kp LEFT_SHIFT   &kp GRAVE          &trans                 &kp COLON      &kp LBKT    &kp MINUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans
 &trans  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp TILDE      &kp LPAR    &kp BACKSLASH  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
                                             &trans                 &kp ENTER      &trans      &trans         &kp TAB       &trans
             >;
@@ -120,10 +120,10 @@
         Nav {
             label = "Nav";
             bindings = <
-        &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &trans    &trans    &kp BACKSPACE  &trans     &trans
-        &trans    &trans  &trans    &trans      &trans         &kp LEFT  &kp DOWN  &kp UP         &kp RIGHT  &trans
-&trans  &trans    &trans  &trans    &trans      &trans         &trans    &trans    &trans         &trans     &trans  &trans
-                          &trans    &kp ENTER   &trans         &trans    &kp TAB   &trans
+        &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPS  &kp STAR  &kp DEL    &trans
+        &trans    &trans  &trans    &trans      &trans         &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT  &trans
+&trans  &trans    &trans  &trans    &trans      &trans         &trans     &trans    &trans    &trans     &trans  &trans
+                          &trans    &kp ENTER   &trans         &trans     &kp TAB   &trans
             >;
         };
 

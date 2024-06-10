@@ -51,7 +51,7 @@ layers:
   - '9'
   - '0'
   - LEFT SHIFT
-  - {t: ▽, type: trans}
+  - '`'
   - {t: ▽, type: trans}
   - ':'
   - '['
@@ -84,10 +84,10 @@ layers:
   - '#'
   - $
   - '%'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - BACKSPACE
-  - {t: ▽, type: trans}
+  - ^
+  - '&'
+  - '*'
+  - DEL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
