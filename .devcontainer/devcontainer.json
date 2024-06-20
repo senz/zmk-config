@@ -7,6 +7,13 @@
 	"features": {
 		"ghcr.io/devcontainers-contrib/features/actionlint:1": {},
 		"ghcr.io/devcontainers-contrib/features/poetry": {},
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"jock.svg"
+			]
+		}
 	}
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
