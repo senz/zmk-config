@@ -283,11 +283,11 @@ path.combo {
 <text x="421" y="123" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-1">
-<path d="M391,116 l-105,-4" class="combo"/>
-<path d="M391,116 l105,4" class="combo"/>
-<rect rx="6" ry="6" x="377" y="103" width="28" height="26" class="combo"/>
-<text x="391" y="116" class="combo tap">Cyr</text>
-<text x="391" y="127" class="combo hold">toggle</text>
+<path d="M421,121 l75,0" class="combo"/>
+<path d="M421,121 l-75,0" class="combo"/>
+<rect rx="6" ry="6" x="407" y="108" width="28" height="26" class="combo"/>
+<text x="421" y="121" class="combo tap">Cyr</text>
+<text x="421" y="132" class="combo hold">toggle</text>
 </g>
 </g>
 </g>
@@ -455,11 +455,11 @@ path.combo {
 <text x="421" y="123" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-1">
-<path d="M391,116 l-105,-4" class="combo"/>
-<path d="M391,116 l105,4" class="combo"/>
-<rect rx="6" ry="6" x="377" y="103" width="28" height="26" class="combo"/>
-<text x="391" y="116" class="combo tap">Cyr</text>
-<text x="391" y="127" class="combo hold">toggle</text>
+<path d="M421,121 l75,0" class="combo"/>
+<path d="M421,121 l-75,0" class="combo"/>
+<rect rx="6" ry="6" x="407" y="108" width="28" height="26" class="combo"/>
+<text x="421" y="121" class="combo tap">Cyr</text>
+<text x="421" y="132" class="combo hold">toggle</text>
 </g>
 </g>
 </g>
@@ -626,11 +626,11 @@ path.combo {
 <text x="421" y="123" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-1">
-<path d="M391,116 l-105,-4" class="combo"/>
-<path d="M391,116 l105,4" class="combo"/>
-<rect rx="6" ry="6" x="377" y="103" width="28" height="26" class="combo"/>
-<text x="391" y="116" class="combo tap">Cyr</text>
-<text x="391" y="127" class="combo hold">toggle</text>
+<path d="M421,121 l75,0" class="combo"/>
+<path d="M421,121 l-75,0" class="combo"/>
+<rect rx="6" ry="6" x="407" y="108" width="28" height="26" class="combo"/>
+<text x="421" y="121" class="combo tap">Cyr</text>
+<text x="421" y="132" class="combo hold">toggle</text>
 </g>
 </g>
 </g>
@@ -786,11 +786,11 @@ path.combo {
 <text x="421" y="123" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-1">
-<path d="M391,116 l-105,-4" class="combo"/>
-<path d="M391,116 l105,4" class="combo"/>
-<rect rx="6" ry="6" x="377" y="103" width="28" height="26" class="combo"/>
-<text x="391" y="116" class="combo tap">Cyr</text>
-<text x="391" y="127" class="combo hold">toggle</text>
+<path d="M421,121 l75,0" class="combo"/>
+<path d="M421,121 l-75,0" class="combo"/>
+<rect rx="6" ry="6" x="407" y="108" width="28" height="26" class="combo"/>
+<text x="421" y="121" class="combo tap">Cyr</text>
+<text x="421" y="132" class="combo hold">toggle</text>
 </g>
 </g>
 </g>
@@ -957,11 +957,11 @@ path.combo {
 <text x="421" y="123" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-1">
-<path d="M391,116 l-105,-4" class="combo"/>
-<path d="M391,116 l105,4" class="combo"/>
-<rect rx="6" ry="6" x="377" y="103" width="28" height="26" class="combo"/>
-<text x="391" y="116" class="combo tap">Cyr</text>
-<text x="391" y="127" class="combo hold">toggle</text>
+<path d="M421,121 l75,0" class="combo"/>
+<path d="M421,121 l-75,0" class="combo"/>
+<rect rx="6" ry="6" x="407" y="108" width="28" height="26" class="combo"/>
+<text x="421" y="121" class="combo tap">Cyr</text>
+<text x="421" y="132" class="combo hold">toggle</text>
 </g>
 </g>
 </g>

@@ -10,16 +10,16 @@ layers:
   - I
   - O
   - P
-  - A
-  - S
-  - D
-  - {t: F, h: LEFT SHIFT}
+  - {t: A, h: LSHFT}
+  - {t: S, h: LALT}
+  - {t: D, h: LGUI}
+  - {t: F, h: LCTRL}
   - G
   - H
-  - {t: J, h: LSHFT}
-  - K
-  - L
-  - ;
+  - {t: J, h: LCTRL}
+  - {t: K, h: RGUI}
+  - {t: L, h: RIGHT ALT}
+  - {t: '''', h: RSHFT}
   - Z
   - X
   - C
@@ -30,120 +30,125 @@ layers:
   - ','
   - .
   - /
-  - ESCAPE
-  - {t: BACKSPACE, h: Num}
-  - {t: SPACE, h: Misc}
-  - ENTER
-  - {t: DEL, h: Sym}
-  - TAB
-  Num:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&repeat'
-  - '&snip'
-  - '&lock'
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - '6'
+  - {t: ESC, h: Sym}
+  - {t: SPACE, h: Sym}
+  - ''
+  - ''
+  - {t: SPACE, h: Nav}
+  - {t: BACKSPACE, h: Nav}
+  Sym:
+  - '!'
+  - '@'
+  - '#'
+  - ;
+  - '{'
+  - '='
   - '7'
   - '8'
   - '9'
   - '0'
-  - F11
-  - F12
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - LEFT SHIFT
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  Sym:
-  - '"'
-  - Sft+ [
-  - Sft+ ]
-  - '['
-  - ']'
-  - Ctl+ X
-  - Ctl+ C
-  - UP
-  - Ctl+ V
-  - {t: ▽, type: trans}
-  - Sft+ 1
-  - Sft+ 2
-  - Sft+ 3
-  - Sft+ 4
-  - Sft+ 5
-  - ''''
-  - LEFT
-  - DOWN
-  - RIGHT
-  - {t: ▽, type: trans}
-  - Sft+ 6
-  - Sft+ 7
-  - Sft+ 8
-  - Sft+ 9
-  - Sft+ 0
-  - '-'
-  - '='
-  - \
+  - LSHFT
   - '`'
   - {t: ▽, type: trans}
+  - ':'
+  - '['
+  - '-'
+  - '4'
+  - '5'
+  - '6'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - LSHFT
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  Misc:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Sft+ Z
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Sft+ Y
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '}'
+  - ']'
+  - )
+  - '~'
+  - (
+  - \
+  - '1'
+  - '2'
+  - '3'
   - {t: ▽, type: trans}
   - {type: held}
+  - ENTER
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - TAB
+  - {t: ▽, type: trans}
+  Nav:
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - DEL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LEFT ARROW
+  - DOWN ARROW
+  - UP ARROW
+  - RIGHT ARROW
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ENTER
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: TAB, type: held}
+  - {t: ▽, type: trans}
+  Tune:
+  - BT CLR
+  - ''
+  - ''
+  - ''
+  - {t: BT, h: '0'}
+  - VOLUME UP
+  - '&snip'
+  - ''
+  - ''
+  - ''
+  - '&bootloader'
+  - ''
+  - ''
+  - ''
+  - {t: BT, h: '1'}
+  - MUTE
+  - PREV
+  - PP
+  - NEXT
+  - '&bootloader'
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: BT, h: '2'}
+  - VOL DN
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+combos:
+- p: [13, 16]
+  k: {t: Base, h: toggle}
+- p: [14, 15]
+  k: ''

@@ -198,5 +198,5 @@ layers:
 combos:
 - p: [13, 16]
   k: {t: '0', h: toggle}
-- p: [13, 15]
+- p: [15, 14]
   k: {t: Cyr, h: toggle}
