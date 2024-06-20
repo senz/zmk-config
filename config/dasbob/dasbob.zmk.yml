@@ -1,0 +1,11 @@
+file_format: "1"
+id: dasbob
+name: Dasbob
+type: shield
+url: https://github.com/tapioki/cephalopoda/tree/main/Architeuthis%20dux
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - dasbob_left
+  - dasbob_right

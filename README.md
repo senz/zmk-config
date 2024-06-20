@@ -5,6 +5,7 @@ Currently, the following keyboards are supported:
 - [Corne MX wireless](./config/corne.keymap)
 - [Totem wireless](./config/totem.keymap)
 - [Rev57LP](./config/rev57lp.keymap)
+- [Dasbob](./config/dasbob.keymap)
 
 ## Keymap representation
 
@@ -32,5 +33,13 @@ Below representation was generated with [`keymap-drawer`](https://github.com/cak
     <summary>Click to expand</summary>
 
 ![Keymap Representation](./keymap-drawer/rev57lp.svg?raw=true "Keymap Representation for Rev57LP wireless")
+</details>
+
+### Dasbob wireless
+
+<details>
+    <summary>Click to expand</summary>
+
+![Keymap Representation](./keymap-drawer/dasbob.svg?raw=true "Keymap Representation for Dasbob wireless")
 </details>
 

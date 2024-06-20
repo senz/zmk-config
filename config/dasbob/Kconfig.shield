@@ -1,0 +1,8 @@
+# Copyright (c) 2021 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_DASBOB_LEFT
+	def_bool $(shields_list_contains,dasbob_left)
+
+config SHIELD_DASBOB_RIGHT
+	def_bool $(shields_list_contains,dasbob_right)
