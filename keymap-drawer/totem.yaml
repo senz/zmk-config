@@ -198,6 +198,5 @@ layers:
 combos:
 - p: [13, 16]
   k: {t: '0', h: toggle}
-  draw_separate: true
 - p: [15, 14]
   k: {t: Cyr, h: toggle}
