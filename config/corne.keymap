@@ -8,64 +8,44 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-#define DEF     0
-#define SYM     1
-#define NAV     2
-#define CYR     3
+// https://github.com/urob/zmk-config?tab=readme-ov-file#timeless-homerow-mods
+// https://github.com/urob/zmk-helpers/blob/main/include/zmk-helpers/key-labels/42.h
 
-&mt { flavor = "tap-preferred"; };
+#define KEYS_L 5 4 3 2 1 0 17 16 15 14 13 12 29 28 27 26 25 24    // Left-hand keys.
+#define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35  // Right-hand keys.
+#define THUMBS 36 37 38 39 40 41                                  // Thumb keys.
+#define TTERM_MS 280
+#define QTAP_MS 175
+#define RPIM_MS 150
 
 / {
     behaviors {
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&kp BSPC>, <&kp MINUS>;
-        };
-
-        td1: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&mt LALT EQUAL>, <&kp GRAVE>;
-        };
-
-        td2: tap_dance_2 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&kp LPAR>, <&kp RPAR>;
-        };
-
-        td3: tap_dance_3 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&mt HASH SEMI>, <&mt AT_SIGN TILDE>;
-        };
-
-        td4: tap_dance_4 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&mt LBKT COMMA>, <&kp RBKT>;
-        };
-
-        // tap toggle
-        // from https://zmk.dev/docs/behaviors/hold-tap#example-use-cases:~:text=Toggle%2Don%2DTap%2C%20Momentary%2Don%2DHold%20Layers
-
-        mo_tog: mo_tog {
+        hmr: hmr {
             compatible = "zmk,behavior-hold-tap";
+            label = "HMR";
+            bindings = <&kp>, <&kp>;
+
             #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&mo>, <&tog>;
+            tapping-term-ms = <TTERM_MS>;
+            quick-tap-ms = <QTAP_MS>;
+            require-prior-idle-ms = <RPIM_MS>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
         };
-    };
 
-    combos {
-        compatible = "zmk,combos";
+        hml: hml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            bindings = <&kp>, <&kp>;
 
-        to_base {
-            bindings = <&to 0>;
-            key-positions = <37 40>;
-            layers = <5 3>;
+            #binding-cells = <2>;
+            tapping-term-ms = <TTERM_MS>;
+            quick-tap-ms = <QTAP_MS>;
+            require-prior-idle-ms = <RPIM_MS>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
         };
     };
 
@@ -73,77 +53,38 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TT  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | WORD |
-            // |BKSP/-|  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  | ; # |  TAB |
-            // |ESC/HY|Z/CTR|  X  |  C  |  V  |  B  |   |  N  |  M   | ,/[ | ./' | / \ | SFT  |
-            //                    |     |=/OPT|SPC/GUI| |ENT/GUI| (/)|     |
-
-            display-name = "Base";
             bindings = <
-&mo_tog SYM SYM           &kp Q        &kp W  &kp E  &kp R        &kp T             &kp Y         &kp U        &kp I  &kp O        &kp P          &caps_word
-&td0                      &kp A        &kp S  &kp D  &kp F        &kp G             &kp H         &kp J        &kp K  &kp L        &td3           &mt LA(LS(LALT)) TAB
-&mt LC(LS(LA(LGUI))) ESC  &mt LCTRL Z  &kp X  &kp C  &mt LSHFT V  &kp B             &kp N         &mt RSHFT M  &td4   &mt SQT DOT  &mt BSLH FSLH  &sk RSHFT
-                                              &none  &td1         &mt LGUI SPACE    &mt RGUI RET  &td2         &none
+&kp GRAVE             &kp Q         &kp W        &kp E         &kp R         &kp T    &kp Y  &kp U         &kp I            &kp O        &kp P            &kp LBKT
+&kp RBKT              &hml LSHFT A  &hml LALT S  &hml LGUI D   &hml LCTRL F  &kp G    &kp H  &hmr RCTRL J  &hmr RGUI K      &hmr RALT L  &hmr RSHFT SEMI  &kp SQT
+&kp LS(LA(LC(LGUI)))  &kp Z         &kp X        &kp C         &kp V         &kp B    &kp N  &kp M         &kp COMMA        &kp DOT      &kp FSLH         &kp BSLH
+                                                 &lt 2 ESCAPE  &lt 2 SPACE   &none    &none  &lt 1 SPACE   &lt 1 BACKSPACE
             >;
         };
 
-        symbols_layer {
-            display-name = "Symbols";
+        layer_lower {
             bindings = <
-&to NAV  &kp EXCL   &kp AT_SIGN  &kp LBRC  &kp RBRC     &kp PIPE     &kp N0         &kp N7   &kp N8  &kp N9  &kp KP_ASTERISK  &trans
-&to DEF  &kp HASH   &kp DOLLAR   &kp LPAR  &kp RPAR     &kp GRAVE    &kp KP_EQUAL   &kp N4   &kp N5  &kp N6  &kp KP_PLUS      &trans
-&trans   &kp COMMA  &kp CARET    &kp LBKT  &kp RBKT     &kp TILDE    &kp AMPERSAND  &kp N1   &kp N2  &kp N3  &kp KP_DIVIDE    &trans
-                                 &trans    &kp PERCENT  &trans       &trans         &kp DOT  &trans
+&kp UNDER       &kp F1    &kp F2  &kp F3    &kp F4     &kp F5       &kp F6     &kp F7     &kp F8    &kp F9    &kp F10   &kp F11
+&mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH  &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR  &mt RCTRL MINUS
+&mt LALT EQUAL  &kp N1    &kp N2  &kp N3    &kp N4     &kp N5       &kp N6     &kp N7     &kp N8    &kp N9    &kp N0    &trans
+                                  &trans    &kp ENTER  &trans       &trans     &lt 3 TAB  &trans
             >;
         };
 
-        nav_layer {
-            display-name = "Nav";
+        layer_raise {
             bindings = <
-&to CYR  &trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_SHIFT  &trans    &trans    &trans    &trans  &trans     &trans  &trans
-&to DEF  &trans  &trans     &trans        &trans          &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
-&trans   &trans  &trans     &trans        &trans          &trans    &trans    &trans    &trans  &trans     &trans  &trans
-                            &mo 4         &trans          &trans    &trans    &trans    &trans
+&kp KP_NUM       &kp KP_SLASH     &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS    &kp C_VOL_UP  &kp HOME   &kp PSCRN  &kp PG_UP  &kp SLCK         &kp CAPS
+&mt LCTRL EQUAL  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS     &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT  &kp INS          &mt RCTRL K_APP
+&trans           &kp KP_N0        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT      &kp C_VOL_DN  &kp END    &none      &kp PG_DN  &kp PAUSE_BREAK  &trans
+                                             &trans     &kp ENTER  &trans          &trans        &lt 3 TAB  &trans
             >;
         };
 
-        cyrillics_layer {
-            display-name = "Cyrillics";
+        layer_adjust {
             bindings = <
-&to DEF  &kp Q        &kp W  &kp E   &kp R   &mt BSLH T    &kp Y   &kp U       &kp I             &kp O           &kp P            &kp LBKT
-&trans   &kp A        &kp S  &kp D   &kp F   &kp G         &kp H   &kp J       &kp K             &kp L           &kp SEMI         &mt TAB SQT
-&trans   &mt LCTRL Z  &kp X  &kp C   &kp V   &kp B         &kp N   &mt RBKT M  &mt LS(N6) COMMA  &mt LS(N7) DOT  &mt LS(N2) FSLH  &trans
-                             &trans  &trans  &trans        &trans  &trans      &trans
-            >;
-        };
-
-        tune_layer {
-            bindings = <
-&trans  &bootloader  &bt BT_CLR  &sys_reset  &bt BT_PRV  &bt BT_NXT    &trans  &trans  &trans  &sys_reset  &bootloader  &trans
-&to 0   &trans       &trans      &trans      &trans      &trans        &trans  &trans  &trans  &trans      &trans       &trans
-&trans  &trans       &trans      &trans      &trans      &trans        &trans  &trans  &trans  &trans      &trans       &trans
-                                 &trans      &trans      &trans        &trans  &trans  &trans
-            >;
-
-            display-name = "tune";
-        };
-
-        game {
-            bindings = <
-&kp ESC   &kp Q  &kp W  &kp E      &kp R      &kp T        &kp Y      &kp U     &kp I      &kp O    &kp P     &kp GRAVE
-&kp TAB   &kp A  &kp S  &kp D      &kp F      &lt 6 G      &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp APOS
-&kp LALT  &kp Z  &kp X  &kp C      &kp V      &kp B        &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RGUI
-                        &kp LCTRL  &kp LSHFT  &kp SPACE    &kp ENTER  &kp BSPC  &kp GRAVE
-            >;
-        };
-
-        gm_num {
-            bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0   &kp MINUS
-&none      &none   &none   &none   &none   &none     &none   &none   &none   &none   &none    &none
-&none      &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-                           &trans  &trans  &trans    &trans  &trans  &trans
+&bootloader  &none         &none         &none         &none         &none           &none         &none         &none         &none         &none         &bootloader
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
+&none        &none         &none         &none         &none         &none           &none         &none         &none         &none         &none         &none
+                                         &trans        &none         &trans          &trans        &none         &trans
             >;
         };
     };
