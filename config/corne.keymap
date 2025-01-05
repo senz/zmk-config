@@ -63,19 +63,19 @@
 
         layer_lower {
             bindings = <
-&kp UNDER       &kp F1    &kp F2  &kp F3     &kp F4    &kp F5       &kp F6     &kp F7    &kp F8     &kp F9    &kp F10   &kp F11
-&mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR   &kp LPAR  &kp RPAR  &mt RCTRL MINUS
-&mt LALT EQUAL  &kp N1    &kp N2  &kp N3     &kp N4    &kp N5       &kp N6     &kp N7    &kp N8     &kp N9    &kp N0    &trans
-                                  &lt 3 TAB  &trans    &trans       &trans     &trans    &lt 3 DEL
+&kp UNDER       &kp F1    &kp F2  &kp F3    &kp F4     &kp F5       &kp F6     &kp F7     &kp F8    &kp F9    &kp F10   &kp F11
+&mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH  &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR  &mt RCTRL MINUS
+&mt LALT EQUAL  &kp N1    &kp N2  &kp N3    &kp N4     &kp N5       &kp N6     &kp N7     &kp N8    &kp N9    &kp N0    &trans
+                                  &trans    &kp ENTER  &trans       &trans     &lt 3 TAB  &trans
             >;
         };
 
         layer_raise {
             bindings = <
-&kp KP_NUM       &kp KP_SLASH     &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS    &kp C_VOL_UP  &kp HOME  &kp PSCRN  &kp PG_UP  &kp SLCK         &kp CAPS
-&mt LCTRL EQUAL  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS     &kp C_MUTE    &kp LEFT  &kp UP     &kp RIGHT  &kp INS          &mt RCTRL K_APP
-&trans           &kp KP_N0        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT      &kp C_VOL_DN  &kp END   &kp DOWN   &kp PG_DN  &kp PAUSE_BREAK  &trans
-                                             &trans     &trans     &lt 3 RET       &lt 3 ESC     &trans    &trans
+&kp KP_NUM       &kp KP_SLASH     &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS    &kp C_VOL_UP  &kp HOME   &kp PSCRN  &kp PG_UP  &kp SLCK         &kp CAPS
+&mt LCTRL EQUAL  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS     &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT  &kp INS          &mt RCTRL K_APP
+&trans           &kp KP_N0        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT      &kp C_VOL_DN  &kp END    &none      &kp PG_DN  &kp PAUSE_BREAK  &trans
+                                             &trans     &kp ENTER  &trans          &trans        &lt 3 TAB  &trans
             >;
         };
 
