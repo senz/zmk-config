@@ -2,17 +2,11 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: urob
-      url-base: https://github.com/urob
-    # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: 2adaa00d1092e41ce11dfae46ce7d2a5bad97ead
       import: app/west.yml
-    - name: zmk-helpers
-      remote: urob
-      revision: e1f2663667078321a596fdbf86d70a9b096e1df4 # Dec 29, 2024
   self:
     path: config
