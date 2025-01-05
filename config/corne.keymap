@@ -18,29 +18,37 @@
 #define QTAP_MS 175
 #define RPIM_MS 150
 
-/* Left-hand HRMs. */
-ZMK_HOLD_TAP(hml,
-    flavor = "balanced";
-    tapping-term-ms = <TTERM_MS>;
-    quick-tap-ms = <QTAP_MS>;
-    require-prior-idle-ms = <RPIM_MS>;
-    bindings = <&kp>, <&kp>;
-    hold-trigger-key-positions = <KEYS_R THUMBS>;
-    hold-trigger-on-release;
-)
-
-/* Right-hand HRMs. */
-ZMK_HOLD_TAP(hmr,
-    flavor = "balanced";
-    tapping-term-ms = <TTERM_MS>;
-    quick-tap-ms = <QTAP_MS>;
-    require-prior-idle-ms = <RPIM_MS>;
-    bindings = <&kp>, <&kp>;
-    hold-trigger-key-positions = <KEYS_L THUMBS>;
-    hold-trigger-on-release;
-)
-
 / {
+    behaviors {
+        hmr: hmr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <TTERM_MS>;
+            quick-tap-ms = <QTAP_MS>;
+            require-prior-idle-ms = <RPIM_MS>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+        };
+
+        hml: hml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <TTERM_MS>;
+            quick-tap-ms = <QTAP_MS>;
+            require-prior-idle-ms = <RPIM_MS>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
