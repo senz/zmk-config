@@ -21,3 +21,4 @@ jobs:
       install_branch: main
       amend_commit: true
       json_path: keymap-drawer/layouts
+      fail_on_error: true
