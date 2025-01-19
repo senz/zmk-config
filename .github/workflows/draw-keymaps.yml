@@ -23,7 +23,7 @@ jobs:
       keymap_patterns: 'config/*.keymap'
       config_path: keymap-drawer/config.yaml
       output_folder: keymap-drawer
-      install_branch: main
+      install_branch: v0.20.0
       amend_commit: true
       json_path: keymap-drawer/layouts
       fail_on_error: true
