@@ -8,8 +8,13 @@ on:
       - 'config/includes/*.dtsi'
       - keymap-drawer/config.yaml
       - .github/workflows/draw-keymaps.yml
+
 permissions:
   contents: write
+
+concurrency:
+  group: keymap-drawer
+  cancel-in-progress: true
 
 jobs:
   draw:
