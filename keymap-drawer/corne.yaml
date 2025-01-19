@@ -1,6 +1,6 @@
 layout: {qmk_keyboard: corne_rotated, layout_name: LAYOUT_split_3x6_3}
 layers:
-  default:
+  Default:
   - '`'
   - Q
   - W
@@ -37,13 +37,13 @@ layers:
   - .
   - /
   - \
-  - {t: ESCAPE, h: raise}
-  - {t: SPACE, h: raise}
+  - {t: ESCAPE, h: Raise}
+  - {t: SPACE, h: Raise}
   - ''
   - ''
-  - {t: SPACE, h: lower}
-  - {t: BACKSPACE, h: lower}
-  lower:
+  - {t: SPACE, h: Lower}
+  - {t: BACKSPACE, h: Lower}
+  Lower:
   - _
   - F1
   - F2
@@ -82,11 +82,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ENTER
-  - adjust
+  - Adjust
   - {t: ▽, type: trans}
   - {t: TAB, type: held}
   - {t: ▽, type: trans}
-  raise:
+  Raise:
   - KP NUM
   - KP SLASH
   - KP 7
@@ -126,10 +126,10 @@ layers:
   - {type: held}
   - ENTER
   - {t: ▽, type: trans}
-  - adjust
+  - Adjust
   - TAB
   - {t: ▽, type: trans}
-  adjust:
+  Adjust:
   - '&bootloader'
   - ''
   - ''

@@ -1,0 +1,154 @@
+layers:
+  Base:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: A, h: LSHFT}
+  - {t: S, h: LALT}
+  - {t: D, h: LGUI}
+  - {t: F, h: LCTRL}
+  - G
+  - H
+  - {t: J, h: LCTRL}
+  - {t: K, h: RGUI}
+  - {t: L, h: RIGHT ALT}
+  - {t: '''', h: RSHFT}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - {t: ESC, h: Sym}
+  - {t: SPACE, h: Sym}
+  - ''
+  - ''
+  - {t: SPACE, h: Nav}
+  - {t: BACKSPACE, h: Nav}
+  Sym:
+  - '!'
+  - '@'
+  - '#'
+  - ;
+  - '{'
+  - '='
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - LSHFT
+  - '`'
+  - {t: ▽, type: trans}
+  - ':'
+  - '['
+  - '-'
+  - '4'
+  - '5'
+  - '6'
+  - {t: ▽, type: trans}
+  - '}'
+  - ']'
+  - )
+  - '~'
+  - (
+  - \
+  - '1'
+  - '2'
+  - '3'
+  - {t: ▽, type: trans}
+  - {type: held}
+  - ENTER
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - TAB
+  - {t: ▽, type: trans}
+  Nav:
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - DEL
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LEFT ARROW
+  - DOWN ARROW
+  - UP ARROW
+  - RIGHT ARROW
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ENTER
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: TAB, type: held}
+  - {t: ▽, type: trans}
+  Tune:
+  - BT CLR
+  - ''
+  - ''
+  - ''
+  - {t: BT, h: '0'}
+  - VOLUME UP
+  - '&snip'
+  - ''
+  - ''
+  - ''
+  - '&bootloader'
+  - ''
+  - ''
+  - ''
+  - {t: BT, h: '1'}
+  - MUTE
+  - PREV
+  - PP
+  - NEXT
+  - '&bootloader'
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: BT, h: '2'}
+  - VOL DN
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+combos:
+- p: [13, 16]
+  k: {t: Base, h: toggle}
+- p: [14, 15]
+  k: ''
