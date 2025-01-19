@@ -1,0 +1,174 @@
+layout: {qmk_keyboard: corne_rotated, layout_name: LAYOUT_split_3x6_3}
+layers:
+  default:
+  - '`'
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '['
+  - ']'
+  - {t: A, h: LSHFT}
+  - {t: S, h: LALT}
+  - {t: D, h: LGUI}
+  - {t: F, h: LCTRL}
+  - G
+  - H
+  - {t: J, h: RCTRL}
+  - {t: K, h: RGUI}
+  - {t: L, h: RALT}
+  - {t: ;, h: RSHFT}
+  - ''''
+  - Meh+ LGUI
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - \
+  - {t: ESCAPE, h: raise}
+  - {t: SPACE, h: raise}
+  - ''
+  - ''
+  - {t: SPACE, h: lower}
+  - {t: BACKSPACE, h: lower}
+  lower:
+  - _
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - {t: +, h: LCTRL}
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
+  - {t: '-', h: RCTRL}
+  - {t: '=', h: LALT}
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ENTER
+  - adjust
+  - {t: ▽, type: trans}
+  - {t: TAB, type: held}
+  - {t: ▽, type: trans}
+  raise:
+  - KP NUM
+  - KP SLASH
+  - KP 7
+  - KP 8
+  - KP 9
+  - KP MINUS
+  - VOL UP
+  - HOME
+  - PSCRN
+  - PG UP
+  - SLCK
+  - CAPS
+  - {t: '=', h: LCTRL}
+  - KP MULTIPLY
+  - KP 4
+  - KP 5
+  - KP 6
+  - KP PLUS
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - INS
+  - {t: APP, h: RCTRL}
+  - {t: ▽, type: trans}
+  - KP 0
+  - KP 1
+  - KP 2
+  - KP 3
+  - KP DOT
+  - VOL DN
+  - END
+  - ''
+  - PG DN
+  - PAUSE BREAK
+  - {t: ▽, type: trans}
+  - {type: held}
+  - ENTER
+  - {t: ▽, type: trans}
+  - adjust
+  - TAB
+  - {t: ▽, type: trans}
+  adjust:
+  - '&bootloader'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&bootloader'
+  - BT CLR
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - {t: BT, h: '4'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '0'}
+  - BT CLR
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - ''
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
