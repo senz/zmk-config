@@ -99,11 +99,11 @@ layers:
   - PG UP
   - SLCK
   - CAPS
-  - {t: '=', h: LCTRL}
-  - KP MULTIPLY
-  - KP 4
-  - KP 5
-  - KP 6
+  - '='
+  - {t: KP MULTIPLY, h: LSHFT}
+  - {t: KP 4, h: LALT}
+  - {t: KP 5, h: LGUI}
+  - {t: KP 6, h: LCTRL}
   - KP PLUS
   - LEFT
   - DOWN
